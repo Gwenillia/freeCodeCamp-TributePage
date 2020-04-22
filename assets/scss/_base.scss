@@ -35,7 +35,12 @@ body {
 
 //  Header
 header {
-    background: repeating-linear-gradient(211deg, rgba(0, 0, 0, 1) 0%, rgba(69, 19, 19, 1) 20%, rgba(0, 0, 0, 1) 40%);
+    background: repeating-linear-gradient(
+        211deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(69, 19, 19, 1) 20%,
+        rgba(0, 0, 0, 1) 40%
+    );
     height: 100vh;
     width: 100%;
     display: grid;
@@ -48,7 +53,7 @@ header {
         width: 50%;
         justify-self: center;
         #image {
-            width: 100%;
+            max-width: 80%;
             height: auto;
             border-radius: 50%;
             box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
@@ -136,7 +141,12 @@ main {
 
 //  FOOTER
 footer p {
-    background: repeating-linear-gradient(-211deg, rgba(0, 0, 0, 1) 0%, rgba(69, 19, 19, 1) 20%, rgba(0, 0, 0, 1) 40%);
+    background: repeating-linear-gradient(
+        -211deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(69, 19, 19, 1) 20%,
+        rgba(0, 0, 0, 1) 40%
+    );
     border-radius: 100% / 2000% 2000% 0 0;
     box-shadow: 0 -2px 1rem black;
     width: 30%;
@@ -189,7 +199,7 @@ footer p {
         }
         #img-div {
             grid-area: picture;
-            max-width: 50rem;
+            max-width: 100%;
             padding-top: 5rem;
         }
         .pres {
@@ -219,7 +229,7 @@ footer p {
         display: block;
         text-align: center;
         #img-div {
-            max-width: 25rem;
+            max-width: 100%;
             margin: 0 auto 3rem auto;
         }
         .pres {

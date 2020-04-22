@@ -25,29 +25,29 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   grid-template-areas: "header . pres"; }
-  /* line 44, ../scss/_base.scss */
+  /* line 49, ../scss/_base.scss */
   header #img-div {
     grid-area: header;
     grid-column: 1;
     align-self: center;
     width: 50%;
     justify-self: center; }
-    /* line 50, ../scss/_base.scss */
+    /* line 55, ../scss/_base.scss */
     header #img-div #image {
-      width: 100%;
+      max-width: 80%;
       height: auto;
       border-radius: 50%;
       box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
       transition: transform 0.7s; }
-      /* line 56, ../scss/_base.scss */
+      /* line 61, ../scss/_base.scss */
       header #img-div #image:hover {
         box-shadow: 0 0 1rem #ffd8ad;
         transform: scale(1.03);
         cursor: pointer; }
-      /* line 61, ../scss/_base.scss */
+      /* line 66, ../scss/_base.scss */
       header #img-div #image:focus, header #img-div #image:active {
         outline: none; }
-    /* line 66, ../scss/_base.scss */
+    /* line 71, ../scss/_base.scss */
     header #img-div #img-caption {
       color: #ffd8ad;
       position: absolute;
@@ -56,27 +56,27 @@ header {
       overflow: hidden;
       top: auto;
       left: -55555rem; }
-  /* line 76, ../scss/_base.scss */
+  /* line 81, ../scss/_base.scss */
   header .pres {
     font-size: 2.4rem;
     width: 75%;
     align-self: center; }
-    /* line 80, ../scss/_base.scss */
+    /* line 85, ../scss/_base.scss */
     header .pres #title {
       grid-area: pres;
       font-size: 4rem;
       color: #ffc381;
       margin-bottom: 3rem; }
-    /* line 86, ../scss/_base.scss */
+    /* line 91, ../scss/_base.scss */
     header .pres p {
       color: #ffd8ad; }
-  /* line 90, ../scss/_base.scss */
+  /* line 95, ../scss/_base.scss */
   header .arrow-header {
     position: absolute;
     bottom: 1rem;
     left: 50%;
     transform: translate(-50%, -50%); }
-    /* line 95, ../scss/_base.scss */
+    /* line 100, ../scss/_base.scss */
     header .arrow-header span {
       display: block;
       width: 2rem;
@@ -84,14 +84,14 @@ header {
       border-bottom: 0.5rem solid #ffc381;
       border-right: 0.5rem solid #ffc381;
       animation: arrows 2s infinite; }
-    /* line 103, ../scss/_base.scss */
+    /* line 108, ../scss/_base.scss */
     header .arrow-header span:nth-child(2) {
       animation-delay: -0.2s; }
-    /* line 106, ../scss/_base.scss */
+    /* line 111, ../scss/_base.scss */
     header .arrow-header span:nth-child(3) {
       animation-delay: -0.4s; }
 
-/* line 113, ../scss/_base.scss */
+/* line 118, ../scss/_base.scss */
 main {
   font-size: 2rem;
   color: #493e10;
@@ -99,21 +99,21 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   column-gap: 15rem; }
-  /* line 121, ../scss/_base.scss */
+  /* line 126, ../scss/_base.scss */
   main .keyelements__pres {
     padding-bottom: 6rem; }
-  /* line 125, ../scss/_base.scss */
+  /* line 130, ../scss/_base.scss */
   main .title {
     color: #3a3521;
     margin-bottom: 5rem; }
-    /* line 128, ../scss/_base.scss */
+    /* line 133, ../scss/_base.scss */
     main .title--hommages {
       margin-top: 2rem; }
-  /* line 132, ../scss/_base.scss */
+  /* line 137, ../scss/_base.scss */
   main li {
     padding-bottom: 2rem; }
 
-/* line 138, ../scss/_base.scss */
+/* line 143, ../scss/_base.scss */
 footer p {
   background: repeating-linear-gradient(-211deg, black 0%, #451313 20%, black 40%);
   border-radius: 100% / 2000% 2000% 0 0;
@@ -124,7 +124,7 @@ footer p {
   font-size: 1rem;
   color: #757575;
   padding: 0.5rem 0 0.5rem 0; }
-  /* line 148, ../scss/_base.scss */
+  /* line 158, ../scss/_base.scss */
   footer p a {
     text-decoration: none;
     color: #ad3030; }
@@ -139,65 +139,65 @@ footer p {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px); } }
 @media (max-width: 1249px) {
-  /* line 170, ../scss/_base.scss */
+  /* line 180, ../scss/_base.scss */
   header {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr));
     grid-template-areas: "picture" "pres"; }
-    /* line 176, ../scss/_base.scss */
+    /* line 186, ../scss/_base.scss */
     header .arrow-header {
       position: absolute;
       left: 93%;
       bottom: 3%; }
-      /* line 180, ../scss/_base.scss */
+      /* line 190, ../scss/_base.scss */
       header .arrow-header span {
         width: 1rem;
         height: 1rem;
         border-bottom: 0.25rem solid #ffc381;
         border-right: 0.25rem solid #ffc381; }
-      /* line 186, ../scss/_base.scss */
+      /* line 196, ../scss/_base.scss */
       header .arrow-header span:nth-child(1) {
         display: none; }
-    /* line 190, ../scss/_base.scss */
+    /* line 200, ../scss/_base.scss */
     header #img-div {
       grid-area: picture;
-      max-width: 50rem;
+      max-width: 100%;
       padding-top: 5rem; }
-    /* line 195, ../scss/_base.scss */
+    /* line 205, ../scss/_base.scss */
     header .pres {
       grid-area: pres;
       width: 80%;
       margin: 0 auto 0 auto;
       padding-bottom: 5rem; }
 
-  /* line 202, ../scss/_base.scss */
+  /* line 212, ../scss/_base.scss */
   body {
     background: #ffd8c1; }
-    /* line 206, ../scss/_base.scss */
+    /* line 216, ../scss/_base.scss */
     body main .title--sons {
       margin-top: 2rem; }
-    /* line 211, ../scss/_base.scss */
+    /* line 221, ../scss/_base.scss */
     body footer {
       margin-top: 2rem; } }
 @media (max-width: 703px) {
-  /* line 218, ../scss/_base.scss */
+  /* line 228, ../scss/_base.scss */
   header {
     display: block;
     text-align: center; }
-    /* line 221, ../scss/_base.scss */
+    /* line 231, ../scss/_base.scss */
     header #img-div {
-      max-width: 25rem;
+      max-width: 100%;
       margin: 0 auto 3rem auto; }
-    /* line 225, ../scss/_base.scss */
+    /* line 235, ../scss/_base.scss */
     header .pres {
       font-size: 2rem; }
 
-  /* line 229, ../scss/_base.scss */
+  /* line 239, ../scss/_base.scss */
   main {
     display: block;
     margin: 2rem 1.5rem 0 2rem; }
 
-  /* line 233, ../scss/_base.scss */
+  /* line 243, ../scss/_base.scss */
   footer p {
     border-radius: 0;
     width: 100%; } }

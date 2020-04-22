@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{SERVER_PORT} !=443
+RewriteRule ^(.*)$ https://gcostet.fr/$1 [R=301,L]
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options nosniff
+Options -Indexes
