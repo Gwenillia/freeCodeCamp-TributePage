@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap");
+/* line 6, ../scss/_base.scss */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif; }
+
+/* line 12, ../scss/_base.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 16, ../scss/_base.scss */
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(to right, #ffd8c1 0, #ffd8c1 49.99%, #3a3521 50%, #ffd8c1 50.1%, #ffd8c1 100%); }
+  /* line 26, ../scss/_base.scss */
+  body .title {
+    font-family: "Lobster", cursive; }
+
+/* line 37, ../scss/_base.scss */
+header {
+  background: repeating-linear-gradient(211deg, black 0%, #451313 20%, black 40%);
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-template-areas: "header . pres"; }
+  /* line 44, ../scss/_base.scss */
+  header #img-div {
+    grid-area: header;
+    grid-column: 1;
+    align-self: center;
+    width: 50%;
+    justify-self: center; }
+    /* line 50, ../scss/_base.scss */
+    header #img-div #image {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+      transition: transform 0.7s; }
+      /* line 56, ../scss/_base.scss */
+      header #img-div #image:hover {
+        box-shadow: 0 0 1rem #ffd8ad;
+        transform: scale(1.03);
+        cursor: pointer; }
+      /* line 61, ../scss/_base.scss */
+      header #img-div #image:focus, header #img-div #image:active {
+        outline: none; }
+    /* line 66, ../scss/_base.scss */
+    header #img-div #img-caption {
+      color: #ffd8ad;
+      position: absolute;
+      width: 15px;
+      height: 5px;
+      overflow: hidden;
+      top: auto;
+      left: -55555rem; }
+  /* line 76, ../scss/_base.scss */
+  header .pres {
+    font-size: 2.4rem;
+    width: 75%;
+    align-self: center; }
+    /* line 80, ../scss/_base.scss */
+    header .pres #title {
+      grid-area: pres;
+      font-size: 4rem;
+      color: #ffc381;
+      margin-bottom: 3rem; }
+    /* line 86, ../scss/_base.scss */
+    header .pres p {
+      color: #ffd8ad; }
+  /* line 90, ../scss/_base.scss */
+  header .arrow-header {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    /* line 95, ../scss/_base.scss */
+    header .arrow-header span {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      border-bottom: 0.5rem solid #ffc381;
+      border-right: 0.5rem solid #ffc381;
+      animation: arrows 2s infinite; }
+    /* line 103, ../scss/_base.scss */
+    header .arrow-header span:nth-child(2) {
+      animation-delay: -0.2s; }
+    /* line 106, ../scss/_base.scss */
+    header .arrow-header span:nth-child(3) {
+      animation-delay: -0.4s; }
+
+/* line 113, ../scss/_base.scss */
+main {
+  font-size: 2rem;
+  color: #493e10;
+  margin: 3rem 15rem 0rem 15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  column-gap: 15rem; }
+  /* line 121, ../scss/_base.scss */
+  main .keyelements__pres {
+    padding-bottom: 6rem; }
+  /* line 125, ../scss/_base.scss */
+  main .title {
+    color: #3a3521;
+    margin-bottom: 5rem; }
+    /* line 128, ../scss/_base.scss */
+    main .title--hommages {
+      margin-top: 2rem; }
+  /* line 132, ../scss/_base.scss */
+  main li {
+    padding-bottom: 2rem; }
+
+/* line 138, ../scss/_base.scss */
+footer p {
+  background: repeating-linear-gradient(-211deg, black 0%, #451313 20%, black 40%);
+  border-radius: 100% / 2000% 2000% 0 0;
+  box-shadow: 0 -2px 1rem black;
+  width: 30%;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  color: #757575;
+  padding: 0.5rem 0 0.5rem 0; }
+  /* line 148, ../scss/_base.scss */
+  footer p a {
+    text-decoration: none;
+    color: #ad3030; }
+
+@keyframes arrows {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px); } }
+@media (max-width: 1249px) {
+  /* line 170, ../scss/_base.scss */
+  header {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-areas: "picture" "pres"; }
+    /* line 176, ../scss/_base.scss */
+    header .arrow-header {
+      position: absolute;
+      left: 93%;
+      bottom: 3%; }
+      /* line 180, ../scss/_base.scss */
+      header .arrow-header span {
+        width: 1rem;
+        height: 1rem;
+        border-bottom: 0.25rem solid #ffc381;
+        border-right: 0.25rem solid #ffc381; }
+      /* line 186, ../scss/_base.scss */
+      header .arrow-header span:nth-child(1) {
+        display: none; }
+    /* line 190, ../scss/_base.scss */
+    header #img-div {
+      grid-area: picture;
+      max-width: 50rem;
+      padding-top: 5rem; }
+    /* line 195, ../scss/_base.scss */
+    header .pres {
+      grid-area: pres;
+      width: 80%;
+      margin: 0 auto 0 auto;
+      padding-bottom: 5rem; }
+
+  /* line 202, ../scss/_base.scss */
+  body {
+    background: #ffd8c1; }
+    /* line 206, ../scss/_base.scss */
+    body main .title--sons {
+      margin-top: 2rem; }
+    /* line 211, ../scss/_base.scss */
+    body footer {
+      margin-top: 2rem; } }
+@media (max-width: 703px) {
+  /* line 218, ../scss/_base.scss */
+  header {
+    display: block;
+    text-align: center; }
+    /* line 221, ../scss/_base.scss */
+    header #img-div {
+      max-width: 25rem;
+      margin: 0 auto 3rem auto; }
+    /* line 225, ../scss/_base.scss */
+    header .pres {
+      font-size: 2rem; }
+
+  /* line 229, ../scss/_base.scss */
+  main {
+    display: block;
+    margin: 2rem 1.5rem 0 2rem; }
+
+  /* line 233, ../scss/_base.scss */
+  footer p {
+    border-radius: 0;
+    width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */

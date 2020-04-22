@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap");
+//font-family: 'Lobster', cursive;
+//font-family: 'Montserrat', sans-serif;
+
+//  General
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background: linear-gradient(
+        to right,
+        $main-bg-color 0,
+        $main-bg-color 49.99%,
+        $font-main-color 50%,
+        $main-bg-color 50.1%,
+        $main-bg-color 100%
+    );
+    .title {
+        font-family: "Lobster", cursive;
+    }
+}
+
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}
+
+//  Header
+header {
+    background: repeating-linear-gradient(211deg, rgba(0, 0, 0, 1) 0%, rgba(69, 19, 19, 1) 20%, rgba(0, 0, 0, 1) 40%);
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-areas: "header . pres";
+    #img-div {
+        grid-area: header;
+        grid-column: 1;
+        align-self: center;
+        width: 50%;
+        justify-self: center;
+        #image {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+            transition: transform 0.7s;
+            &:hover {
+                box-shadow: 0 0 1rem $header-font-color;
+                transform: scale(1.03);
+                cursor: pointer;
+            }
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+        #img-caption {
+            color: $header-font-color;
+            position: absolute;
+            width: 15px;
+            height: 5px;
+            overflow: hidden;
+            top: auto;
+            left: -55555rem;
+        }
+    }
+    .pres {
+        font-size: 2.4rem;
+        width: 75%;
+        align-self: center;
+        #title {
+            grid-area: pres;
+            font-size: 4rem;
+            color: $header-title-color;
+            margin-bottom: 3rem;
+        }
+        p {
+            color: $header-font-color;
+        }
+    }
+    .arrow-header {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        span {
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            border-bottom: 0.5rem solid $header-title-color;
+            border-right: 0.5rem solid $header-title-color;
+            animation: arrows 2s infinite;
+        }
+        span:nth-child(2) {
+            animation-delay: -0.2s;
+        }
+        span:nth-child(3) {
+            animation-delay: -0.4s;
+        }
+    }
+}
+
+//  Main
+main {
+    font-size: 2rem;
+    color: $font-color;
+    margin: 3rem 15rem 0rem 15rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    column-gap: 15rem;
+    .keyelements {
+        &__pres {
+            padding-bottom: 6rem;
+        }
+    }
+    .title {
+        color: $font-main-color;
+        margin-bottom: 5rem;
+        &--hommages {
+            margin-top: 2rem;
+        }
+    }
+    li {
+        padding-bottom: 2rem;
+    }
+}
+
+//  FOOTER
+footer p {
+    background: repeating-linear-gradient(-211deg, rgba(0, 0, 0, 1) 0%, rgba(69, 19, 19, 1) 20%, rgba(0, 0, 0, 1) 40%);
+    border-radius: 100% / 2000% 2000% 0 0;
+    box-shadow: 0 -2px 1rem black;
+    width: 30%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(117, 117, 117);
+    padding: 0.5rem 0 0.5rem 0;
+    a {
+        text-decoration: none;
+        color: rgb(173, 48, 48);
+    }
+}
+
+//  keyframes
+@keyframes arrows {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+@media (max-width: 1249px) {
+    header {
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-areas:
+            "picture"
+            "pres";
+        .arrow-header {
+            position: absolute;
+            left: 93%;
+            bottom: 3%;
+            span {
+                width: 1rem;
+                height: 1rem;
+                border-bottom: 0.25rem solid $header-title-color;
+                border-right: 0.25rem solid $header-title-color;
+            }
+            span:nth-child(1) {
+                display: none;
+            }
+        }
+        #img-div {
+            grid-area: picture;
+            max-width: 50rem;
+            padding-top: 5rem;
+        }
+        .pres {
+            grid-area: pres;
+            width: 80%;
+            margin: 0 auto 0 auto;
+            padding-bottom: 5rem;
+        }
+    }
+    body {
+        background: $main-bg-color;
+        main {
+            .title {
+                &--sons {
+                    margin-top: 2rem;
+                }
+            }
+        }
+        footer {
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media (max-width: 703px) {
+    header {
+        display: block;
+        text-align: center;
+        #img-div {
+            max-width: 25rem;
+            margin: 0 auto 3rem auto;
+        }
+        .pres {
+            font-size: 2rem;
+        }
+    }
+    main {
+        display: block;
+        margin: 2rem 1.5rem 0 2rem;
+    }
+    footer p {
+        border-radius: 0;
+        width: 100%;
+    }
+}
